@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lunar_Veil.Data;
+namespace Lunar_Veil.Models;
 
 public partial class Employee
 {
-    public string EmployeeId { get; set; }
+    public int EmployeeId { get; set; }
 
     public string EmployeeName { get; set; } = null!;
 
-    public bool Gender { get; set; }
+    public bool? Gender { get; set; }
 
     public DateOnly? DateOfBirth { get; set; }
 

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Employee>
+<form method="get">
+    <input type="text" name="searchTerm" placeholder="Search name, phone or email" class="form-control" />
+    <button type="submit" class="btn btn-primary mt-2">Search</button>
+</form>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+            <th>Department</th>
+            <th>Gender</th>
+            <th>Photo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.EmployeeId</td>
+                <td>@emp.EmployeeName</td>
+                <td>@emp.Department</td>
+                <td>@(emp.Gender == 0 ? "Male" : "Female")</td>
+                <td><img src="@emp.PhotoPath" width="50" height="50" /></td>
+            </tr>
+        }
+    </tbody>
+</table>
