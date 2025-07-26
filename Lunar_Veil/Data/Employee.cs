@@ -5,11 +5,11 @@ namespace Lunar_Veil.Data;
 
 public partial class Employee
 {
-    public int EmployeeId { get; set; }
+    public string EmployeeId { get; set; }
 
     public string EmployeeName { get; set; } = null!;
 
-    public bool? Gender { get; set; }
+    public bool Gender { get; set; }
 
     public DateOnly? DateOfBirth { get; set; }
 

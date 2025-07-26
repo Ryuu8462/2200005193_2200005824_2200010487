@@ -57,5 +57,12 @@ public partial class _22bitv02EmployeeContext : DbContext
         OnModelCreatingPartial(modelBuilder);
     }
 
+    private static object Employee(string p) => GetEmployee(p);
+
+    private static object GetEmployee(string p)
+    {
+        return p.Employee;
+    }
+
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
